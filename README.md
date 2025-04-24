@@ -6,30 +6,30 @@ Ela permite que usuários jurídicos, técnicos ou analistas removam dados sens�
 
 ---
 
-## ✅ Funcionalidades
+## Funcionalidades
 
-- 📄 Upload de arquivos: `.pdf`, `.odt`, `.csv` ou entrada manual de texto.
-- 🤖 Detecção de dados pessoais e sensíveis via:
+-  Upload de arquivos: `.pdf`, `.odt`, `.csv` ou entrada manual de texto.
+-  Detecção de dados pessoais e sensíveis via:
   - Regex (CPF, e-mail, IP, etc.)
   - NER com modelo `legal-bert-lgpd`
   - LLM local (via Ollama) — opcional
-- 🎛️ Modo seletivo ou agressivo de anonimização
-- 🌗 Tema escuro ativável com toggle
-- 👁️ Preview do texto anonimizado
-- ⬇️ Botão de download no formato escolhido
-- 📁 Logs salvos localmente com hash e timestamp
-- 🔄 Containerizado com suporte a `docker-compose`
+-  Modo seletivo ou agressivo de anonimização
+-  Tema escuro ativável com toggle
+-  Preview do texto anonimizado
+- ⬇ Botão de download no formato escolhido
+-  Logs salvos localmente com hash e timestamp
+-  Containerizado com suporte a `docker-compose`
 
 ---
 
-## 📦 Estrutura do Projeto
+## Estrutura do Projeto
 
 
 ---
 
-## 🚀 Executando a aplicação
+##  Executando a aplicação
 
-### ▶️ Modo local (sem Docker)
+### Modo local (sem Docker)
 
 ```bash
 # 1. Crie e ative o ambiente virtual
