@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Anonimizador LGPD</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="theme-toggle">
+        <label>
+            <input type="checkbox" id="darkModeToggle"> 🌙 Tema escuro
+        </label>
+    </div>
+
+    <div class="container">
+        <h1>Anonimizador de Documentos — LGPD</h1>
+
+        <form method="post" enctype="multipart/form-data">
+            <label>Upload de Arquivo:</label>
+            <input type="file" name="documento">
+
+            <label>Ou cole seu texto:</label>
+            <textarea name="texto_manual" placeholder="Cole aqui seu conteúdo textual..."></textarea>
+
+            <label>Tipo de anonimização:</label>
+            <select name="mask_type">
+                <option value="***">***</option>
+                <option value="[REMOVIDO]">[REMOVIDO]</option>
+                <option value="[DADO SENSÍVEL]">[DADO SENSÍVEL]</option>
+            </select>
+
+            <label>Formato para download:</label>
+            <select name="formato_saida">
+                <option value="mesmo">Mesmo do arquivo original</option>
+                <option value="pdf">PDF</option>
+                <option value="odt">ODT</option>
+                <option value="csv">CSV</option>
+            </select>
+
+            <div class="checkboxes">
+                <label><input type="checkbox" name="usar_llm" checked> Usar verificação semântica (LLM)</label>
+                <label><input type="checkbox" name="agressivo"> Anonimização agressiva</label>
+            </div>
+
+            <button type="submit">Anonimizar</button>
+        </form>
+    </div>
+
+    <script>
+        const toggle = document.getElementById("darkModeToggle");
+        const body = document.body;
+        const storedTheme = localStorage.getItem("dark-mode");
+
+        if (storedTheme === "true") {
+            body.classList.add("dark");
+            toggle.checked = true;
+        }
+
+        toggle.addEventListener("change", () => {
+            if (toggle.checked) {
+                body.classList.add("dark");
+                localStorage.setItem("dark-mode", "true");
+            } else {
+                body.classList.remove("dark");
+                localStorage.setItem("dark-mode", "false");
+            }
+        });
+    </script>
+</body>
+</html>

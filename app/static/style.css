@@ -1,0 +1,133 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f3f4f6;
+    color: #1f2937;
+    margin: 0;
+    padding: 2rem;
+}
+
+.container {
+    max-width: 700px;
+    background: #ffffff;
+    padding: 2rem;
+    margin: auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+}
+
+h1 {
+    text-align: center;
+    color: #111827;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    font-weight: 600;
+    position: sticky;
+    top: 0;
+    background: white;
+    padding-top: 1rem;
+    z-index: 10;
+}
+
+label {
+    display: block;
+    margin-top: 1rem;
+    font-weight: 500;
+}
+
+input[type="file"],
+textarea,
+select {
+    width: 100%;
+    padding: 0.6rem;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    margin-top: 0.3rem;
+    background-color: #f9fafb;
+}
+
+textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+button {
+    width: 100%;
+    margin-top: 1.8rem;
+    padding: 0.8rem;
+    background-color: #1d4ed8;
+    color: white;
+    font-weight: 600;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #1e40af;
+}
+
+.checkboxes {
+    display: flex;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.download-button {
+    display: block;
+    background-color: #059669;
+    color: white;
+    padding: 0.7rem 1.2rem;
+    border-radius: 8px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 1.2rem;
+}
+
+.download-button:hover {
+    background-color: #047857;
+}
+.theme-toggle {
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
+    font-size: 0.95rem;
+    color: #4b5563;
+}
+
+body.dark {
+    background-color: #1f2937;
+    color: #f3f4f6;
+}
+
+body.dark .container {
+    background-color: #111827;
+    color: #f3f4f6;
+    box-shadow: none;
+}
+
+body.dark input,
+body.dark select,
+body.dark textarea {
+    background-color: #374151;
+    color: #f9fafb;
+    border: 1px solid #4b5563;
+}
+
+body.dark button {
+    background-color: #2563eb;
+}
+
+body.dark button:hover {
+    background-color: #1d4ed8;
+}
+
+body.dark .download-button {
+    background-color: #10b981;
+}
+
+body.dark .download-button:hover {
+    background-color: #059669;
+}
+

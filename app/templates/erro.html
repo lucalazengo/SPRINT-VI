@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Erro no Processamento</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>❌ Ocorreu um erro</h1>
+        <p>Infelizmente algo deu errado durante a anonimização.</p>
+        <pre style="background: #f3f4f6; padding: 1rem; border-radius: 8px;">{{ erro }}</pre>
+        <a href="/" style="display: block; margin-top: 1.5rem;">← Voltar à página inicial</a>
+    </div>
+</body>
+</html>

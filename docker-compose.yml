@@ -1,0 +1,33 @@
+version: '3.8'
+
+services:
+  lgpd-app:
+    build: .
+    container_name: anon-lgpd
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./logs:/app/logs
+    depends_on:
+      - ollama
+    environment:
+      - FLASK_ENV=production
+    networks:
+      - lgpd-net
+
+  ollama:
+    image: ollama/ollama
+    container_name: ollama
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama_data:/root/.ollama
+    networks:
+      - lgpd-net
+
+volumes:
+  ollama_data:
+
+networks:
+  lgpd-net:
+    driver: bridge

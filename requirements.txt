@@ -1,0 +1,9 @@
+Flask
+flask-cors
+fpdf
+pandas
+odfpy
+PyMuPDF
+transformers
+torch
+sentence-transformers

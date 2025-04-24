@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Resultado da Anonimização</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>✅ Anonimização concluída</h1>
+
+        <p><strong>Tempo de processamento:</strong> {{ tempo }} segundos</p>
+
+        <a href="{{ url_for('main.download_file', filename=nome_saida) }}"
+           class="download-button"
+           download>
+            ⬇️ Baixar documento anonimizado ({{ nome_saida.split('.')[-1]|upper }})
+        </a>
+
+        <label style="margin-top: 2rem;">Preview do texto anonimizado:</label>
+        <textarea readonly style="min-height: 300px;">{{ preview }}</textarea>
+
+        <a href="/" style="display: block; margin-top: 2rem; text-align: center;">← Anonimizar outro documento</a>
+    </div>
+</body>
+</html>
