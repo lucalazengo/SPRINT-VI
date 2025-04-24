@@ -1,4 +1,4 @@
-# 🛡️ Anonimizador LGPD — Aplicação Flask
+# Anonimizador LGPD 
 
 Esta é uma aplicação web desenvolvida com **Flask** e containerizada com **Docker**, voltada à **anonimização automática de documentos** conforme a **Lei Geral de Proteção de Dados Pessoais (LGPD - Lei nº 13.709/2018)**.
 
